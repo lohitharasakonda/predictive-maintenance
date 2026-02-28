@@ -35,11 +35,11 @@ Each engine starts healthy and degrades over time until failure. The goal is to 
 ### Feature Engineering Pipeline
 
 ```
-Raw sensors (21) -> Drop low-variance (6 removed) → 15 sensors
-  → Rolling mean/std (windows 5, 10): 60 features
-  → Lag features (lags 1, 3): 30 features
-  → + setting_1: 1 feature
-  → Total: 91 features
+Raw sensors (21) -> Drop low-variance (6 removed) -> 15 sensors
+  - Rolling mean/std (windows 5, 10): 60 features
+  - Lag features (lags 1, 3): 30 features
+  - + setting_1: 1 feature
+  - Total: 91 features
 ```
 
 ## Project Structure
