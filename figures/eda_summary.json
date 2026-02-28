@@ -1,0 +1,21 @@
+{
+  "n_engines": 100,
+  "total_records": 20631,
+  "n_columns": 26,
+  "min_lifetime": 128,
+  "max_lifetime": 362,
+  "mean_lifetime": 206.31,
+  "constant_sensors": [
+    "setting_2",
+    "setting_3",
+    "sensor_1",
+    "sensor_5",
+    "sensor_10",
+    "sensor_16",
+    "sensor_18",
+    "sensor_19"
+  ],
+  "n_constant_sensors": 8,
+  "rul_cap_threshold": 130,
+  "pct_above_cap": 36.51786147060249
+}

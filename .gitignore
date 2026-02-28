@@ -1,0 +1,39 @@
+# Data (raw and processed are large / regenerable)
+data/raw/
+data/processed/
+
+# Keep demo data
+!data/demo/
+
+# Trained models (large binary files)
+models/*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
