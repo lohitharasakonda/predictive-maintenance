@@ -1,12 +1,12 @@
 # Predictive Maintenance for Turbofan Engines
 
-End-to-end machine learning system that predicts **Remaining Useful Life (RUL)** of aircraft turbofan engines using NASA C-MAPSS sensor data. Includes a trained Random Forest model, a FastAPI prediction backend, and a Streamlit monitoring dashboard — fully containerized with Docker.
+End-to-end machine learning system that predicts **Remaining Useful Life (RUL)** of aircraft turbofan engines using NASA C-MAPSS sensor data. Includes a trained Random Forest model, a FastAPI prediction backend, and a Streamlit monitoring dashboard fully running with Docker.
 
 ---
 
 ## Dataset
 
-**NASA Commercial Modular Aero-Propulsion System Simulation (C-MAPSS) — FD001**
+**NASA Turbofan Jet Engine (C-MAPSS) FD001**
 
 | Property | Value |
 |---|---|
@@ -35,7 +35,7 @@ Each engine starts healthy and degrades over time until failure. The goal is to 
 ### Feature Engineering Pipeline
 
 ```
-Raw sensors (21) → Drop low-variance (6 removed) → 15 sensors
+Raw sensors (21) -> Drop low-variance (6 removed) → 15 sensors
   → Rolling mean/std (windows 5, 10): 60 features
   → Lag features (lags 1, 3): 30 features
   → + setting_1: 1 feature
@@ -65,10 +65,10 @@ predictive-maintenance/
 │   ├── 4_scaling_split.ipynb
 │   └── 5_modeling.ipynb
 ├── data/
-│   ├── raw/                 # NASA C-MAPSS text files (not tracked)
-│   ├── processed/           # Cleaned CSVs (not tracked)
+│   ├── raw/                 # NASA C-MAPSS text files 
+│   ├── processed/           # Cleaned CSVs 
 │   └── demo/                # Sample engine CSVs for testing
-├── models/                  # Trained model & scaler (not tracked)
+├── models/                  # Trained model & scaler 
 ├── figures/                 # EDA & model visualizations
 ├── docker-compose.yml
 ├── requirements.txt
@@ -204,9 +204,7 @@ Three sample engine CSVs are included in `data/demo/` for testing:
 - **Machine Learning**: scikit-learn, pandas, NumPy
 - **Backend**: FastAPI, Uvicorn
 - **Frontend**: Streamlit, Plotly
-- **Containerization**: Docker, Docker Compose
+- **Containerization**: Docker
 - **Data**: NASA C-MAPSS (Turbofan Engine Degradation Simulation)
 
-## License
 
-This project is for educational and research purposes. The NASA C-MAPSS dataset is publicly available from the [NASA Prognostics Data Repository](https://data.nasa.gov/dataset/C-MAPSS-Aircraft-Engine-Simulator-Data/xaut-bemq).
